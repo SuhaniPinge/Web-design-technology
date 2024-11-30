@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Accessible Website</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Times New Roman',
+   Times, serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  background: url('bgimg.jpg')
+   no-repeat center center fixed;
+  background-size: cover; 
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px dashed #007BFF;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #007BFF;
+  color: #fff;
+  padding: 8px 15px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+header {
+  background: rgb(123, 72, 251);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-list a {
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+button{
+  background-color:
+  rgb(123, 72, 251);
+  color: #fff;
+  padding: 3px;
+  border-radius: 5px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  background:
+  rgb(123, 72, 251);
+  color: #fff;
+  margin-top: 20px;
+  margin-top: 80px;
+}
+
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">
+    Skip to main content</a>
+  <header>
+    <nav aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section id="home" tabindex="-1">
+      <h1>Welcome to Our Accessible Website</h1>
+      <p>Building an inclusive web for everyone!</p>
+    </section>
+
+    <section id="about" tabindex="-1">
+      <h2>About Us</h2>
+      <p>We prioritize accessibility to ensure our 
+        content is usable by all.</p>
+    </section>
+    <section id="services" tabindex="-1">
+      <h2>Services</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>Accessibility Audits</li>
+        <li>Inclusive Design Training</li>
+      </ul>
+    </section>
+    <section id="contact" tabindex="-1">
+      <h2>Contact Us</h2>
+      <form aria-label="Contact Form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" 
+        required aria-required="true">
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" 
+        required aria-required="true">
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="1"
+         required aria-required="true"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    </main>
+  <footer>
+    <p>&copy; 2024 Accessible Website Co.</p>
+  </footer>
+</body>
+</html>
